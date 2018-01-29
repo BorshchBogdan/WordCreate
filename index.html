@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 900px;
+            height: 600px;
+            padding: 10px;
+            float: left;
+            display: none;
+        }
+
+        .surname {
+            width: 200px;
+            height: 30px;
+            margin-bottom: 20px;
+        }
+
+        .origin {
+            width: 850px;
+            height: 130px;
+            margin-bottom: 20px;
+        }
+
+        .way {
+            width: 850px;
+            height: 140px;
+            margin-bottom: 20px;
+        }
+
+        .statistic {
+            width: 850px;
+            height: 70px;
+            margin-bottom: 20px;
+        }
+
+        .baza {
+            width: 850px;
+            height: 50px;
+            margin-bottom: 20px;
+        }
+
+        .similar {
+            width: 300px;
+            height: 50px;
+            margin-bottom: 20px;
+        }
+
+        .add {
+            width: 500px;
+            height: 100px;
+            float: right;
+        }
+
+        .table {
+            display: none;
+        }
+
+        .toponimTable {
+            display: none;
+        }
+
+        .error {
+            width: 200px;
+            height: 50px;
+            float: left;
+            display: none;
+            color: red;
+        }
+
+        .boxToponim {
+            width: 900px;
+            height: 500px;
+            padding: 10px;
+            float: left;
+            display: none;
+        }
+
+        .surnameToponim {
+            width: 300px;
+            height: 30px;
+            margin-bottom: 10px;
+        }
+
+        .originToponim {
+            width: 850px;
+            height: 130px;
+            margin-bottom: 20px;
+        }
+
+        .wayToponim {
+            width: 850px;
+            height: 140px;
+            margin-bottom: 20px;
+        }
+
+        .similarToponim {
+            width: 300px;
+            height: 50px;
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="error">
+        <h3>Ви ввели невірні дані</h3>
+    </div>
+    <div class="add">
+        <input type="text" class="text" placeholder=" Введіть тут прізвище" autofocus>
+        <input type="button" class="search" value="Шукати прізвище">
+        <input type="button" class="toponim" value="Прізвища">
+        <div style="width:50px;height:10px;"></div>
+        <input type="text" class="textToponim" placeholder=" Введіть тут топонім">
+        <input type="button" class="searchToponim" value="Шукати топоніми">
+        <input type="button" class="tableToponim" value="Топоніми">
+    </div>
+
+    <div class="box">
+
+        <div class="surname"></div>
+        <div class="origin"></div>
+        <div class="way"></div>
+        <div class="statistic"></div>
+        <div class="baza"></div>
+        <div class="similar"></div>
+    </div>
+
+    <div class="table">
+
+        <table border="1" ; cellspacing="0" ; cellpadding="5" ;>
+            <caption>Таблиця прізвищ</caption>
+            <tr>
+                <th>Прізвище</th>
+                <th>Спосіб словоутворення</th>
+                <th>Кількість в базі</th>
+            </tr>
+            <tr align="center" ; bgcolor="white">
+                <td colspan="3"> БІЛИЙ </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Білак</td>
+                <td>морфологічний – суфіксація</td>
+                <td>2067 </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Білан </td>
+                <td>морфологічний – суфіксація</td>
+                <td>13383</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Біланенко </td>
+                <td>морфологічний – суфіксація</td>
+                <td>351 </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Біланик </td>
+                <td>морфологічний – суфіксація</td>
+                <td>299 </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Біланчук </td>
+                <td>морфологічний – суфіксація</td>
+                <td>429 </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Біланюк </td>
+                <td>морфологічний – суфіксація</td>
+                <td>565 </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Білас </td>
+                <td>морфологічний – суфіксація</td>
+                <td>13383</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Білаш </td>
+                <td>морфологічний – суфіксація</td>
+                <td>4205 </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Білей </td>
+                <td>морфологічний – суфіксація</td>
+                <td>663 </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Білейчук </td>
+                <td>морфологічний – суфіксація</td>
+                <td>481 </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Білецький </td>
+                <td>морфологічний – суфіксація</td>
+                <td>2216 </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Біленький </td>
+                <td>морфологічний – суфіксація</td>
+                <td>617 </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Білий </td>
+                <td>морфологічний – суфіксація</td>
+                <td>11336 </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Білик </td>
+                <td>морфологічний – суфіксація</td>
+                <td>2216 </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Білинець </td>
+                <td>морфологічний – суфіксація</td>
+                <td>578 </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Білинський</td>
+                <td>морфологічний – суфіксація</td>
+                <td>455 </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Білич </td>
+                <td>морфологічний – суфіксація</td>
+                <td>1449 </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Білоус </td>
+                <td>основоскладання</td>
+                <td>40547 </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Білун </td>
+                <td>морфологічний – суфіксація</td>
+                <td>318 </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Білуник </td>
+                <td>морфологічний – суфіксація</td>
+                <td>253 </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Біляк </td>
+                <td>морфологічний – суфіксація</td>
+                <td>2944 </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Білай </td>
+                <td>морфологічний – суфіксація</td>
+                <td>936 </td>
+            </tr>
+
+            <tr align="center" ;>
+                <td colspan="3">ЧОРНИЙ</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Чорний </td>
+                <td>морфологічний – суфіксація</td>
+                <td>4205 </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Чорній </td>
+                <td>морфологічний – суфіксація</td>
+                <td>4205 </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Чорней </td>
+                <td>морфологічний – суфіксація</td>
+                <td>4205 </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Чорняк </td>
+                <td>морфологічний – суфіксація</td>
+                <td>734 </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Чорниш </td>
+                <td>морфологічний – суфіксація</td>
+                <td>364 </td>
+            </tr>
+
+            <tr align="center" ;>
+                <td colspan="3">ЗЕЛЕНИЙ</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Зелений </td>
+                <td>морфологічний – суфіксація</td>
+                <td>1651 </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Зеленко</td>
+                <td>морфологічний – суфіксація</td>
+                <td>1443 </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Зеленько </td>
+                <td>морфологічний – суфіксація</td>
+                <td>2171 </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Зеленюк</td>
+                <td>морфологічний – суфіксація</td>
+                <td>4400 </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Зеленяк</td>
+                <td>морфологічний – суфіксація</td>
+                <td>799 </td>
+            </tr>
+
+
+            <tr align="center" ;>
+                <td colspan="3">СІРИЙ</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Сірко</td>
+                <td>морфологічний – суфіксація</td>
+                <td>2210 </td>
+            </tr>
+
+            <tr align="center" ;>
+                <td colspan="3">ЖОВТИЙ</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Жовтан</td>
+                <td>морфологічний – суфіксація</td>
+                <td>435 </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Жовтяк</td>
+                <td>морфологічний – суфіксація</td>
+                <td>1046 </td>
+            </tr>
+
+            <tr align="center" ;>
+                <td colspan="3">РУДИЙ</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Рижак</td>
+                <td>морфологічний – суфіксація</td>
+                <td>3042 </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Рудий</td>
+                <td>морфологічний – суфіксація</td>
+                <td>7228 </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Рудак</td>
+                <td>морфологічний – суфіксація</td>
+                <td>1157 </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Рудяк</td>
+                <td>морфологічний – суфіксація</td>
+                <td>2743 </td>
+            </tr>
+        </table>
+
+    </div>
+    <div class="toponimTable">
+        <table border="1" ; cellspacing="0" ; cellpadding="5" ;>
+            <caption>Таблиця топонімів</caption>
+            <tr>
+                <th>Топонім</th>
+                <th>Спосіб словоутворення</th>
+            </tr>
+            <tr align="center" ; bgcolor="white">
+                <td colspan="3"> ЧОРНИЙ </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Чорна</td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Чорний </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Чорниш </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Чорногора </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Біланчук </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Біланюк </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Білас </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Білаш </td>
+                <td>основоскладання</td>
+
+            </tr>
+            <tr align="center" ;>
+                <td>Чорноморське </td>
+                <td>морфологічний – суфіксація</td>
+
+            </tr>
+            <tr align="center" ;>
+                <td>Чорнява </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Червоне </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Червоновільський </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Червоноград </td>
+                <td>основоскладання</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Червонозаводське </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+
+            <tr align="center" ;>
+                <td colspan="3">СИНІЙ</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Синиця </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Синя </td>
+                <td>морфологічний – суфіксація</td>
+
+            </tr>
+            <tr align="center" ;>
+                <td>Синяк </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Синевир </td>
+                <td>Композит на основі «вир» та означення «синій».</td>
+            </tr>
+            <tr align="center" ;>
+                <td colspan="3">ЗЕЛЕНИЙ</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Зелене </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Зелениця </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Зеленївка </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Зеленогірське </td>
+                <td>Композит на основі «вир» та означення «синій».</td>
+            </tr>
+            <tr align="center" ;>
+                <td colspan="3">ЗОЛОТИЙ</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Золота</td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Золотуха </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td colspan="3">СРІБНИЙ</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Серебрянка </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Срібне </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td colspan="3">ЖОВТИЙ</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Жовта </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td colspan="3">БІЛИЙ </td>
+            </tr>
+            <tr align="center" ;>
+                <td>Білий </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Біла </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Біленьке </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Білогорівка </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Білогородка </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Білозерка </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Білозерське </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Білокам’янськ </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Білокурякине </td>
+                <td>основоскладання</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Білоріченський </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Білосток </td>
+                <td>основоскладання</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Білоус </td>
+                <td>основоскладання</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Більськ </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td colspan="3">РУДИЙ</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Рижувата </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Руда </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Рудка </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Рудне </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+            <tr align="center" ;>
+                <td>Рудниця </td>
+                <td>морфологічний – суфіксація</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="boxToponim">
+
+        <div class="surnameToponim"></div>
+        <div class="originToponim"></div>
+        <div class="wayToponim"></div>
+        <div class="similarToponim"></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
